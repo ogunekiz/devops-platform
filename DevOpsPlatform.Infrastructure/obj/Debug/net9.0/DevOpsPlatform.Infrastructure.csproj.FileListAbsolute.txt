@@ -1,0 +1,17 @@
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Infrastructure.deps.json
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Infrastructure.runtimeconfig.json
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Infrastructure.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Infrastructure.pdb
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Domain.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\bin\Debug\net9.0\DevOpsPlatform.Domain.pdb
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.AssemblyInfo.cs
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPl.AAC3432F.Up2Date
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\refint\DevOpsPlatform.Infrastructure.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.pdb
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\DevOpsPlatform.Infrastructure.genruntimeconfig.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Infrastructure\obj\Debug\net9.0\ref\DevOpsPlatform.Infrastructure.dll

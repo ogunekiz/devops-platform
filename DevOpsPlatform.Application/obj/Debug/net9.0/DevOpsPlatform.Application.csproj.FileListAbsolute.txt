@@ -1,0 +1,11 @@
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\bin\Debug\net9.0\DevOpsPlatform.Application.deps.json
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\bin\Debug\net9.0\DevOpsPlatform.Application.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\bin\Debug\net9.0\DevOpsPlatform.Application.pdb
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.AssemblyInfoInputs.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.AssemblyInfo.cs
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.csproj.CoreCompileInputs.cache
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\refint\DevOpsPlatform.Application.dll
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\DevOpsPlatform.Application.pdb
+D:\Projects\NET Projects\API\DevOpsPlatform\DevOpsPlatform.Application\obj\Debug\net9.0\ref\DevOpsPlatform.Application.dll

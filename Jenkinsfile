@@ -1,12 +1,16 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:9.0'
+            args '-u root:root'
+        }
+    }
 
     environment {
         SONAR_TOKEN = credentials('sonar-token')
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm

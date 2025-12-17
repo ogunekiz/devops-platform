@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:9.0'
+            args '-u root'
+        }
+    }
 
     environment {
         DOTNET_CLI_TELEMETRY_OPTOUT = '1'
@@ -8,12 +13,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Restore') {
             steps {
                 sh 'dotnet restore'

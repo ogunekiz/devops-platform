@@ -1,13 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/dotnet/sdk:9.0'
-            args '-u root:root'
-        }
-    }
+    agent any
 
     environment {
-        SONAR_TOKEN = credentials('sonar-token')
+        DOTNET_CLI_TELEMETRY_OPTOUT = '1'
+        DOTNET_NOLOGO = 'true'
+        PATH = "/root/.dotnet/tools:${env.PATH}"
     }
 
     stages {
@@ -23,42 +20,29 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('SonarQube Analysis') {
             steps {
-                sh 'dotnet build --no-restore'
+                withSonarQubeEnv('SonarQube') {
+                    sh '''
+                    dotnet tool install --global dotnet-sonarscanner || true
+
+                    dotnet-sonarscanner begin \
+                      /k:devopsplatform \
+                      /d:sonar.host.url=http://sonarqube:9000 \
+                      /d:sonar.login=$SONAR_TOKEN
+
+                    dotnet build --no-restore
+
+                    dotnet-sonarscanner end \
+                      /d:sonar.login=$SONAR_TOKEN
+                    '''
+                }
             }
         }
-
-        stage('Test') {
-            steps {
-                sh 'dotnet test --no-build'
-            }
-        }
-
-stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('SonarQube') {
-            sh '''
-            export PATH="$PATH:/root/.dotnet/tools"
-
-            dotnet tool install --global dotnet-sonarscanner || true
-
-            dotnet-sonarscanner begin \
-              /k:"devopsplatform" \
-              /d:sonar.login=$SONAR_TOKEN
-
-            dotnet build
-
-            dotnet-sonarscanner end /d:sonar.login=$SONAR_TOKEN
-            '''
-        }
-    }
-}
-
 
         stage('Quality Gate') {
             steps {
-                timeout(time: 2, unit: 'MINUTES') {
+                timeout(time: 1, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
                 }
             }

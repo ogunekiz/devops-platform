@@ -7,9 +7,9 @@ pipeline {
     }
 
     environment {
+        SONAR_TOKEN = credentials('sonar-token')
         DOTNET_CLI_TELEMETRY_OPTOUT = '1'
         DOTNET_NOLOGO = 'true'
-        PATH = "/root/.dotnet/tools:${env.PATH}"
     }
 
     stages {
@@ -25,14 +25,14 @@ pipeline {
                     sh '''
                     dotnet tool install --global dotnet-sonarscanner || true
 
-                    dotnet-sonarscanner begin \
+                    dotnet sonarscanner begin \
                       /k:devopsplatform \
                       /d:sonar.host.url=http://sonarqube:9000 \
                       /d:sonar.login=$SONAR_TOKEN
 
                     dotnet build --no-restore
 
-                    dotnet-sonarscanner end \
+                    dotnet sonarscanner end \
                       /d:sonar.login=$SONAR_TOKEN
                     '''
                 }

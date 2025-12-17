@@ -19,25 +19,25 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh '''
-                    dotnet tool install --global dotnet-sonarscanner || true
+stage('SonarQube Analysis') {
+    withSonarQubeEnv('SonarQube') {
+        sh '''
+            dotnet tool install --global dotnet-sonarscanner || true
+            export PATH="$PATH:/root/.dotnet/tools"
 
-                    dotnet sonarscanner begin \
-                      /k:devopsplatform \
-                      /d:sonar.host.url=http://sonarqube:9000 \
-                      /d:sonar.login=$SONAR_TOKEN
+            dotnet-sonarscanner begin \
+              /k:devopsplatform \
+              /d:sonar.host.url=http://sonarqube:9000 \
+              /d:sonar.login=$SONAR_TOKEN
 
-                    dotnet build --no-restore
+            dotnet build
 
-                    dotnet sonarscanner end \
-                      /d:sonar.login=$SONAR_TOKEN
-                    '''
-                }
-            }
-        }
+            dotnet-sonarscanner end \
+              /d:sonar.login=$SONAR_TOKEN
+        '''
+    }
+}
+
 
         stage('Quality Gate') {
             steps {

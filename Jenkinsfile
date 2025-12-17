@@ -35,23 +35,26 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh '''
-                    dotnet tool install --global dotnet-sonarscanner || true
+stage('SonarQube Analysis') {
+    steps {
+        withSonarQubeEnv('SonarQube') {
+            sh '''
+            export PATH="$PATH:/root/.dotnet/tools"
 
-                    dotnet sonarscanner begin \
-                      /k:"devopsplatform" \
-                      /d:sonar.login=$SONAR_TOKEN
+            dotnet tool install --global dotnet-sonarscanner || true
 
-                    dotnet build
+            dotnet-sonarscanner begin \
+              /k:"devopsplatform" \
+              /d:sonar.login=$SONAR_TOKEN
 
-                    dotnet sonarscanner end /d:sonar.login=$SONAR_TOKEN
-                    '''
-                }
-            }
+            dotnet build
+
+            dotnet-sonarscanner end /d:sonar.login=$SONAR_TOKEN
+            '''
         }
+    }
+}
+
 
         stage('Quality Gate') {
             steps {

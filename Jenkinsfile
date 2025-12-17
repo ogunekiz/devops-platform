@@ -20,6 +20,7 @@ pipeline {
         }
 
 stage('SonarQube Analysis') {
+          steps {
     withSonarQubeEnv('SonarQube') {
         sh '''
             dotnet tool install --global dotnet-sonarscanner || true
@@ -36,6 +37,7 @@ stage('SonarQube Analysis') {
               /d:sonar.login=$SONAR_TOKEN
         '''
     }
+}
 }
 
 
